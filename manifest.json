@@ -9,7 +9,8 @@
   "content_scripts": [
     {
         "matches": ["*://www.slideshare.net/*"],
-        "js": ["content.js"]
+        "js": ["jquery-2.1.1.min.js", "content.js"],
+        "css": ["styles.css"]
     }
   ],
   "browser_action": {
