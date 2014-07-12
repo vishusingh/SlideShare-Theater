@@ -1,0 +1,22 @@
+{
+  "name": "SlideShare Theater",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "background": {
+    "scripts": ["eventPage.js"],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+        "matches": ["*://www.slideshare.net/*"],
+        "js": ["content.js"]
+    }
+  ],
+  "browser_action": {
+    "default_icon": {
+        "19": "images/19x19.png",
+        "38": "images/38x38.png"
+    },
+    "default_title": "Start SlideShare Theater"
+  }
+}
