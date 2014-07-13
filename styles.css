@@ -32,12 +32,22 @@ body.theater-running {
   padding-top: 60px;
   width: 1024px;
 }
-#theater-content .slideshare-title {
+#theater-content .theater-slideshow-meta .slideshare-title {
   color: #cbcbcb;
+  float: left;
   font-family: 'Helvetica Neue', arial, sans-serif;
   font-size: 22px;
   font-weight: 100;
   letter-spacing: 1px;
+  margin-bottom: 25px;
+  width: 750px;
+}
+#theater-content .theater-slideshow-meta .theater-author {
+  color: #cbcbcb;
+  font-family: 'Helvetica Neue', arial, sans-serif;
+  float: right;
+  text-align: right;
+  width: 274px;
 }
 #theater-content #theater-slides {
   margin: 0;
@@ -45,4 +55,19 @@ body.theater-running {
 }
 #theater-content #theater-slides li {
   list-style: none;
+  margin: 30px 0;
+  text-align: center;
+}
+#theater-content #theater-slides li img {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+#theater-content #theater-slides li .slide-number {
+  background: #3C3F42;
+  border-radius: 18px;
+  color: #fff;
+  display: inline-block;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-top: 9px;
+  padding: 3px 11px;
 }

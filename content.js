@@ -16,9 +16,12 @@ chrome.runtime.onMessage.addListener( function(request, sender){
         var theaterHeaderContainer = $('.theater-header-container');
         var theaterContent = $('#theater-content');
         var slideshowTitle = $('.title h1.h-slideshow-title').text();
+        var authorName = $('.h-author-name span[itemprop="name"]').text();
         var theaterTitle = $('.slideshare-title', '#theater-content');
+        var theaterAuthor = $('.theater-author', '#theater-content');
 
         theaterTitle.text(slideshowTitle);
+        theaterAuthor.text(authorName);
 
         var ssLogo = chrome.extension.getURL('/images/ss-logo.png');
         theaterHeaderContainer.append('<img src="' + ssLogo + '"/>');
