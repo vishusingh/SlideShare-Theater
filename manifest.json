@@ -30,7 +30,7 @@
   },
   "web_accessible_resources": ["ss-theater.html", "images/*.png"],
   "commands": {
-    "start-ss-theater": {
+    "toggle-ss-theater": {
       "suggested_key": { "default": "Alt+Shift+S" },
       "description": "Toggle SS Theater"
     }

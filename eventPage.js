@@ -2,7 +2,7 @@ chrome.browserAction.onClicked.addListener( function (tab) {
   startTheater();
 })
 chrome.commands.onCommand.addListener(function(command) {
-  if (command = 'start-ss-theater'){
+  if (command = 'toggle-ss-theater'){
     startTheater();
   }
 });
