@@ -40,7 +40,7 @@ chrome.runtime.onMessage.addListener( function(request, sender){
 
         for (var i = 0; i <= slideUrls.length - 1; i++) {
           slidesList.append('<li id="' + (i+1) + '"><img src="' + slideUrls[totalSlides - (i+1)] + '"/><span class="slide-number">' + (i+1) + '/' + slideUrls.length +'</span></li>');
-          thumbsList.append('<li><a href="#' + (i+1) + '"><img src="' + thumbUrls[totalSlides - (i+1)] + '"/></a></li>');
+          thumbsList.append('<li><a class="slide-thumb" href="#' + (i+1) + '"><img src="' + thumbUrls[totalSlides - (i+1)] + '"/></a></li>');
         };
 
         setTimeout(function () {
@@ -53,14 +53,19 @@ chrome.runtime.onMessage.addListener( function(request, sender){
         }, 1000);
 
         theater.scroll(function(){
-          $('#esc-help').addClass('animated fadeOutRight');
+          var escHelp = $('#esc-help');
+          if(theater.scrollTop() > 0) {
+            escHelp.addClass('animated fadeOutRight');
+          } else if(theater.scrollTop() == 0) {
+            escHelp.removeClass('fadeOutRight').addClass('fadeInRight');
+          }
         });
 
         $('#thumbs-list-handle').click(function() {
           thumbsListContainer.toggleClass('closed');
         })
 
-        $('a', '#theater-slides-list').click(function(e) {
+        $('a.slide-thumb', '#theater-slides-list').click(function(e) {
           e.preventDefault();
           var theater = $('#ss-theater');
 
