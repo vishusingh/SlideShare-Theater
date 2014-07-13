@@ -1,10 +1,48 @@
+body.theater-running {
+  overflow: hidden !important;
+}
 #ss-theater {
   background: #2d2d2d;
   display: none;
   height: 100%;
   left: 0;
+  overflow-y: scroll;
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 9999;
+}
+#theater-header {
+  background: #1a1a1a;
+  height: 68px;
+  width: 100%;
+}
+#theater-header .theater-header-container {
+  background: url('images/ss-logo.png');
+  margin: 0 auto;
+  width: 1024px;
+}
+#theater-header .theater-header-container img {
+  position: relative;
+  top: 15px;
+}
+#theater-content {
+  display: none;
+  margin: 0 auto;
+  padding-top: 60px;
+  width: 1024px;
+}
+#theater-content .slideshare-title {
+  color: #cbcbcb;
+  font-family: 'Helvetica Neue', arial, sans-serif;
+  font-size: 22px;
+  font-weight: 100;
+  letter-spacing: 1px;
+}
+#theater-content #theater-slides {
+  margin: 0;
+  padding: 0;
+}
+#theater-content #theater-slides li {
+  list-style: none;
 }

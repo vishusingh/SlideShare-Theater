@@ -10,7 +10,7 @@
     {
         "matches": ["*://www.slideshare.net/*"],
         "js": ["jquery-2.1.1.min.js", "content.js"],
-        "css": ["styles.css"]
+        "css": ["styles.css", "css/animate.css"]
     }
   ],
   "browser_action": {
@@ -19,5 +19,6 @@
         "38": "images/38x38.png"
     },
     "default_title": "Start SlideShare Theater"
-  }
+  },
+  "web_accessible_resources": ["ss-theater.html", "images/*.png"]
 }
