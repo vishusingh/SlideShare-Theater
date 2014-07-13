@@ -3,11 +3,7 @@ chrome.runtime.onMessage.addListener( function(request, sender){
     var theater = $('#ss-theater');
 
     if( theater.length > 0 ) {
-      theater.addClass('animated fadeOutDownBig');
-      setTimeout(function() {
-        theater.remove();
-        $('body').removeClass('theater-running');
-      }, 600);
+      closeTheater();
     } else {
       $('body').addClass('theater-running').append('<div id="ss-theater"/>');
       var theater = $('#ss-theater');
@@ -46,5 +42,18 @@ chrome.runtime.onMessage.addListener( function(request, sender){
         }, 600);
       });
     }
+
+    $(document).keyup(function (e) {
+      if (e.keyCode == 27) { closeTheater(); }
+    })
+
+    function closeTheater() {
+      theater.addClass('animated fadeOutDownBig');
+      setTimeout(function() {
+        theater.remove();
+        $('body').removeClass('theater-running');
+      }, 600);
+    }
+
   }
 });
