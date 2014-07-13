@@ -129,3 +129,12 @@ body.theater-running {
   margin-top: 9px;
   padding: 3px 11px;
 }
+#esc-help {
+  background: url('chrome-extension://__MSG_@@extension_id__/images/esc-help.png') center no-repeat;
+  bottom: 50px;
+  display: none;
+  height: 40px;
+  position: fixed;
+  right: 10px;
+  width: 128px;
+}

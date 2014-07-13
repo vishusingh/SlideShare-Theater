@@ -48,6 +48,14 @@ chrome.runtime.onMessage.addListener( function(request, sender){
           thumbsListContainer.show().addClass('animated fadeInUp');
         }, 600);
 
+        setTimeout(function () {
+          $('#esc-help').show().addClass('animated fadeInRight');
+        }, 1000);
+
+        theater.scroll(function(){
+          $('#esc-help').addClass('animated fadeOutRight');
+        });
+
         $('#thumbs-list-handle').click(function() {
           thumbsListContainer.toggleClass('closed');
         })
