@@ -1,4 +1,6 @@
 @dark: #2D2D2D;
+@gray: #CDCCCC;
+@lightGray: #3D3C3C;
 @headerbg: #1A1A1A;
 @textGray: #CBCBCB;
 @numberTextBg: #3C3F42;
@@ -36,6 +38,71 @@ body.theater-running {
       top: 15px;
     }
   }
+}
+
+#theater-slides-list {
+  background: @headerbg;
+  display: none;
+  border: 1px solid lighten(@dark, 20%);
+  height: 450px;
+  left: 0;
+  position: fixed;
+  top: 20%;
+  padding: 20px 10px 20px 20px;
+  -webkit-transition: 0.3s left;
+  -webkit-transform: translate3d(0, 0, 0);
+  z-index: 10000;
+
+  &.closed {
+    left: -216px !important;
+  }
+
+  #thumbs-list-handle {
+    background: @headerbg url('chrome-extension://__MSG_@@extension_id__/images/thumbs-list-icon.png') 12px center no-repeat;
+    border-radius: 0 4px 4px 0;
+    border: 1px solid rgb(96, 96, 96);
+    border-width: 1px 1px 1px 0;
+    cursor: pointer;
+    display: block;
+    height: 95px;
+    position: absolute;
+    right: -53px;
+    top: 198px;
+    width: 52px;
+  }
+
+  .slide-thumbs {
+    height: 450px;
+    margin: 0;
+    overflow-y: scroll;
+    padding: 0 10px 0 0;
+
+    li img {
+      border: 1px solid @gray;
+      margin-bottom: 10px;
+      width: 160px;
+    }
+  
+    &::-webkit-scrollbar {
+      width: 9px;
+    }
+   
+    /* Track */
+    &::-webkit-scrollbar-track {
+      background: none;
+      -webkit-border-radius: 9px;
+      border-radius: 9px;
+    }
+     
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+      background: @lightGray;
+      -webkit-border-radius: 10px;
+      border-radius: 10px;
+      width: 9px;
+    }
+  }
+
 }
 
 #theater-content {
