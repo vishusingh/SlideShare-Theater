@@ -28,5 +28,11 @@
     },
     "default_title": "Start SlideShare Theater"
   },
-  "web_accessible_resources": ["ss-theater.html", "images/*.png"]
+  "web_accessible_resources": ["ss-theater.html", "images/*.png"],
+  "commands": {
+    "toggle-ss-theater": {
+      "suggested_key": { "default": "Alt+Shift+S" },
+      "description": "Toggle SS Theater"
+    }
+  }
 }

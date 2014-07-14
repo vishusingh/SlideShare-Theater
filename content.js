@@ -1,5 +1,5 @@
 chrome.runtime.onMessage.addListener( function(request, sender){
-  if( request.startTheater == true ) {
+  if( request.startTheater ) {
     var theater = $('#ss-theater');
 
     if( theater.length > 0 ) {
