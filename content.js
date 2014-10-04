@@ -11,7 +11,7 @@ chrome.runtime.onMessage.addListener( function(request, sender){
       $('#ss-theater').load(chrome.extension.getURL('ss-theater.html'), function () {
         var theaterHeaderContainer = $('.theater-header-container');
         var theaterContent = $('#theater-content');
-        var slideshowTitle = $('.title h1.h-slideshow-title').text();
+        var slideshowTitle = $('.title h1.slideshow-title-text').text();
         var authorName = $('.h-author-name span[itemprop="name"]').text();
         var theaterTitle = $('.slideshare-title', '#theater-content');
         var theaterAuthor = $('.theater-author', '#theater-content');
@@ -51,6 +51,10 @@ chrome.runtime.onMessage.addListener( function(request, sender){
         setTimeout(function () {
           $('#esc-help').show().addClass('animated fadeInRight');
         }, 1000);
+
+        setTimeout(function () {
+          thumbsListContainer.addClass('closed');
+        }, 3000);
 
         theater.scroll(function(){
           var escHelp = $('#esc-help');
