@@ -66,7 +66,7 @@ body.theater-running {
     display: block;
     height: 95px;
     position: absolute;
-    right: -53px;
+    right: -52px;
     top: 198px;
     width: 52px;
   }
@@ -117,16 +117,24 @@ body.theater-running {
       font-family: @font-family;
       font-size: 22px;
       font-weight: 200;
-      letter-spacing: 1px;
+      letter-spacing: 0.5px;
       margin-bottom: 25px;
       width: 750px;
     }
     
     .theater-author {
-      color: @textGray;
-      font-family: @font-family;
+      color: darken(@textGray, 20%);
       float: right;
+      font-family: @font-family;
+      font-size: 14px;
+      font-weight: 200;
+      height: 20px;
+      letter-spacing: 0.5px;
+      overflow: hidden;
+      padding-top: 5px;
       text-align: right;
+      text-overflow: ellipsis;
+      white-space: nowrap;
       width: 274px;
     }
   }

@@ -12,12 +12,12 @@ chrome.runtime.onMessage.addListener( function(request, sender){
         var theaterHeaderContainer = $('.theater-header-container');
         var theaterContent = $('#theater-content');
         var slideshowTitle = $('.title h1.slideshow-title-text').text();
-        var authorName = $('.h-author-name span[itemprop="name"]').text();
+        var authorName = $('.j-author-name').text();
         var theaterTitle = $('.slideshare-title', '#theater-content');
         var theaterAuthor = $('.theater-author', '#theater-content');
 
         theaterTitle.text(slideshowTitle);
-        theaterAuthor.text(authorName);
+        theaterAuthor.text('by ' + authorName);
 
         var ssLogo = chrome.extension.getURL('/images/ss-logo.png');
         theaterHeaderContainer.append('<img src="' + ssLogo + '"/>');
