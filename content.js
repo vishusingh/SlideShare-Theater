@@ -11,7 +11,7 @@ chrome.runtime.onMessage.addListener( function(request, sender){
       $('#ss-theater').load(chrome.extension.getURL('ss-theater.html'), function () {
         var theaterHeaderContainer = $('.theater-header-container');
         var theaterContent = $('#theater-content');
-        var slideshowTitle = $('.title h1.slideshow-title-text').text();
+        var slideshowTitle = $('.slideshow-title-text').text();
         var authorName = $('.j-author-name').text();
         var theaterTitle = $('.slideshare-title', '#theater-content');
         var theaterAuthor = $('.theater-author', '#theater-content');
