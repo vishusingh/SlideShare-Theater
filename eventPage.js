@@ -1,8 +1,3 @@
-// chrome.runtime.onInstalled.addListener(() => {
-//   console.log("Extension installed and service worker is running!");
-// console.log(chrome.action);
-// });
-
 // Listen for browser action (now called action) clicks
 chrome.action.onClicked.addListener((tab) => {
   startTheater(tab);
